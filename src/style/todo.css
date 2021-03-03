@@ -1,0 +1,241 @@
+/* ------ BASIC SETTINGS ------ */
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&family=Lobster+Two&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Signika Negative', Helvetica, sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+body {
+  background: -webkit-gradient(linear,
+  left top, right top,
+  from(rgba(223,223,223,1)),
+  color-stop(20%, rgba(255,255,255,1)), 
+  color-stop(80%, rgba(255,255,255,1)), 
+  to(rgba(223,223,223,1)));
+  background: -o-linear-gradient(left,
+  rgba(223,223,223,1) 0%,
+  rgba(255,255,255,1) 20%, 
+  rgba(255,255,255,1) 80%, 
+  rgba(223,223,223,1) 100%);
+  background: linear-gradient(90deg,
+  rgba(223,223,223,1) 0%,
+  rgba(255,255,255,1) 20%, 
+  rgba(255,255,255,1) 80%, 
+  rgba(223,223,223,1) 100%);
+}
+
+/* ------ HEADER ------ */
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5px 5px;
+  max-width: 770px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0 0 0 / 45%);
+          box-shadow: 0px 0px 3px rgba(0 0 0 / 45%);
+  border-radius: 4px;
+  background-color: #ECECEC;
+}
+
+h1 {
+  padding: 25px 0px 10px;
+  text-align: center;
+  font-family: 'Lobster Two', 'Brush Script MT', cursive;
+}
+
+.fa-clipboard-list:before {
+  content: "\f46d";
+  color: #ED6C6C;
+}
+
+.form {
+  width: 100%;
+  padding: 10px 10px;
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+ 
+.input__label {
+  margin: 3px 0px;
+  font-size: 22px;
+}
+
+.input__text {
+  margin: 3px 0px;
+  padding: 5px 7px;
+  border: none;
+}
+
+.input__text:focus {
+  outline: none !important;
+  border:2px solid #cc9a9a;
+}
+
+.input__text--title {
+  height: 40px;
+  font-size: 18px;
+}
+
+.input__text--description {
+  height: 100px;
+  font-size: 18px;
+}
+
+.input__button {
+  height: 40px;
+  margin: 10px 0px 3px;
+  font-size: 20px;
+  background-color: #ED6C6C;
+  border: none;
+  cursor: pointer;
+}
+
+.input__button:hover {
+  opacity: 0.8;
+}
+
+.input__button:active { 
+  -webkit-transform: scale(0.99); 
+      -ms-transform: scale(0.99); 
+          transform: scale(0.99); 
+} 
+
+/* ------ MAIN ------ */
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 770px;
+  margin: 5px 5px;
+}
+
+.list {
+  width: 100%;
+}
+
+.list-item {
+  margin: 10px 0px;
+  padding: 10px 10px 10px 20px;
+  -webkit-box-shadow: 0px 0px 3px rgb(0 0 0 / 40%);
+          box-shadow: 0px 0px 3px rgb(0 0 0 / 40%);
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.list-item:hover {
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.list-item__done-icon {
+  text-align: right;
+  pointer-events: none;
+}
+
+.fa-check-circle:before {
+  content: "\f058";
+  font-size: 24px;
+  color: #48E200;
+}
+
+.list-item__done-icon--show-false {
+  display: none;
+}
+
+.list-item--active {
+  display: block;
+  border-left: 6px solid #ED6C6C;
+  cursor: pointer;
+}
+
+.list-item--done {
+  border-left: 6px solid #48E200;
+  cursor: pointer;
+}
+
+.list-item__text {
+  padding-right: 30px;
+  word-break: break-word;
+  pointer-events: none;
+}
+
+.list-item__text--title {
+  margin: 0px 0px 10px;
+}
+
+.list-item__text--description {
+  margin: 0px 0px 10px;
+}
+
+.list-item__action--show-false {
+  visibility: hidden;
+}
+
+.list-item__action--show-true {
+  text-align: right;
+  pointer-events: none;
+}
+
+.list-item__action--remove-btn-true {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #48E200;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.list-item__action--remove-btn-true:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 560px){
+  .header{
+    margin: 25px 15px 10px 15px;
+  }
+
+  .main {
+    margin: 0px 15px 10px 15px;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .header{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
