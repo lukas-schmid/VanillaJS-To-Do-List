@@ -21,6 +21,7 @@ npm install
 
 - Simple webpack.config already set up
 - Linting with Airbnb’s ESlint-configuration
+- Storage with localStorage
 
 ## Usage
 
